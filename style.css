@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 13px;
+    font-size: 12px;
     background-color: hsl(210, 46%, 95%);
     font-family: 'Manrope', sans-serif;
 }
@@ -28,6 +28,20 @@ main {
     border-radius: 2vh 2vh 0 0;
 }
 
+.rightSide {
+    margin: 4vh 8vw;
+}
+
+.rightSide > h1 {
+    font-size: 1rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.rightSide > p {
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
