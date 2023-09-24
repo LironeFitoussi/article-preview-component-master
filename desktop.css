@@ -19,6 +19,7 @@ main {
 }
 
 .rightSide {
+    position: absolute;
     margin: 0 3.5vw;
     gap: 2.5vh;
 }
@@ -56,3 +57,4 @@ main {
 .nameAndDate {
     width: 70%;
 }
+

@@ -31,7 +31,8 @@ main {
 .rightSide {
     display: flex;
     flex-direction: column;
-    margin: 4vh 8vw;
+    padding: 5vh;
+    width: 68vw;
 }
 
 .rightSide > h1 {
@@ -43,6 +44,7 @@ main {
 .rightSide > p {
     color: hsl(214, 17%, 51%);
     font-weight: 500;
+    font-size: 1.05rem;
 }
 
 .commentUser {
@@ -104,6 +106,28 @@ main {
 .attribution a {
   color: hsl(212, 23%, 69%);
 }
+
+
+/* JS */
+#shareMobile {
+    display: none;
+}
+
+#shareMobileActive {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 11vh;
+    position: absolute;
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(214, 17%, 51%);
+    width: 85.5vw;
+    align-self: center;
+    bottom: 2vh;
+    border-radius: 0 0 2vh 2vh;
+}
+
 
 
 #Colors {
