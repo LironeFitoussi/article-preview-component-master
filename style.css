@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 12px;
+    font-size: 13.2px;
     background-color: hsl(210, 46%, 95%);
     font-family: 'Manrope', sans-serif;
 }
@@ -16,7 +16,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    border-radius: 3vh;
+    border-radius: 2vh;
 }
 
 .leftSide {
@@ -29,6 +29,8 @@ main {
 }
 
 .rightSide {
+    display: flex;
+    flex-direction: column;
     margin: 4vh 8vw;
 }
 
@@ -42,6 +44,42 @@ main {
     color: hsl(214, 17%, 51%);
     font-weight: 500;
 }
+
+.commentUser {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentUser > img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.nameAndDate {
+    width: 60%;
+}
+
+.nameAndDate > * {
+    margin: 0;
+}
+
+.shareBtn {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    text-align: right;
+    padding: 2vw;
+    height: 2.5vh;
+    width: 2.5vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: hsl(210, 46%, 95%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
