@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: hsl(210, 46%, 95%);
 }
 
 main {
@@ -27,4 +28,21 @@ main {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+#Colors {
+    /* ## Colors */
+
+/* - Very Dark Grayish Blue */
+color: hsl(217, 19%, 35%);
+
+/* - Desaturated Dark Blue */
+color: hsl(214, 17%, 51%);
+
+/* - Grayish Blue */
+color: hsl(212, 23%, 69%);
+
+/* - Light Grayish Blue */
+color: hsl(210, 46%, 95%);
 }
