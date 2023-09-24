@@ -80,7 +80,7 @@ main {
     color: hsl(212, 23%, 69%);
 }
 
-.shareBtn {
+#shareBtn {
     display: flex;
     flex-direction: column;
     border: none;
@@ -94,7 +94,7 @@ main {
     background-color: hsl(210, 46%, 95%);
 }
 
-.shareBtn > img {
+#shareBtn > img {
     padding-bottom: 1px;
 }
 
