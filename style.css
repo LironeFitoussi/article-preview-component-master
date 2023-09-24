@@ -16,6 +16,7 @@ main {
     justify-content: center;
     align-items: center;
     background-color: #fff;
+    border-radius: 3vh;
 }
 
 .leftSide {
@@ -24,6 +25,7 @@ main {
     background-image: url(./images/drawers.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 2vh 2vh 0 0;
 }
 
 .attribution {
