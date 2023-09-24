@@ -59,11 +59,23 @@ main {
 }
 
 .nameAndDate {
+    display: flex;
+    flex-direction: column;
+    gap: .5vh;
     width: 60%;
 }
 
 .nameAndDate > * {
     margin: 0;
+}
+
+.nameAndDate > p {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.nameAndDate > span {
+    color: hsl(212, 23%, 69%);
 }
 
 .shareBtn {
@@ -80,13 +92,17 @@ main {
     background-color: hsl(210, 46%, 95%);
 }
 
+.shareBtn > img {
+    padding-bottom: 1px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(212, 23%, 69%);
 }
 
 
