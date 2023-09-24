@@ -1,0 +1,58 @@
+body {
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+main {
+    flex-direction: row;
+    width: 60vw;
+    height: 40vh;
+}
+
+.leftSide {
+    height: 100%;
+    background-image: url(./images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2vh  0 0 2vh;
+}
+
+.rightSide {
+    margin: 0 3.5vw;
+    gap: 2.5vh;
+}
+
+.rightSide > h1 {
+    font-size: 1.6rem;
+}
+
+.rightSide > p {
+    font-size: 1.1rem;
+}
+
+.commentUser {
+    margin-top: 0;
+} 
+
+.rightSide > * {
+    margin: 0;
+} 
+
+.commentUser > img {
+    width: 4vw;
+} 
+
+.shareBtn {
+    padding: 1.7vw;
+    height: 0;
+    width: 0;
+}
+
+.shareBtn > img {
+    width: 1.7vw;
+}
+
+.nameAndDate {
+    width: 70%;
+}
