@@ -1,49 +1,60 @@
 const shareBtn = document.querySelector("#shareBtn");
+const shareComp = document.createElement("div");
+shareComp.id = "shareComp";
+shareComp.className = "shareMobileActive";
+shareComp.style.position = "absolute";
+shareComp.style.display = "none";
+
+const shareContent = `
+    <span>SHARE</span>
+    <span><a href="https://www.facebook.com" target="_blank"><img src="./images/icon-facebook.svg" alt="icon-facebook"></a></span>
+    <span><a href="https://twitter.com" target="_blank"><img src="./images/icon-twitter.svg" alt="icon-twitter"></a></span>
+    <span><a href="https://www.pinterest.com" target="_blank"><img src="./images/icon-pinterest.svg" alt="icon-pinterest"></a></span>
+    <span class="shareBtnActive"><img src="./images/icon-share.svg" alt="share button"></span>
+`;
+
+
+shareComp.innerHTML = shareContent;
+
+let topPosition = -100;
 let isLoaded = false;
+let unloadTimeout;
 
 function loadShare() {
-    const mainElem = document.querySelector("main");
-    let topPosition = -50;
-    
     if (!isLoaded) {
-        isLoaded = true;
-
-        const shareComp = document.createElement("div");
-        shareComp.id = "shareComp";
-        shareComp.className = "shareMobileActive";
-        shareComp.style.position = "absolute";
-        shareComp.style.display = "none"
-
-        const shareContent = `
-            <span>SHARE</span>
-            <span><img src="./images/icon-facebook.svg" alt="icon-facebook"></span>
-            <span><img src="./images/icon-twitter.svg" alt="icon-twitter"></span>
-            <span><img src="./images/icon-pinterest.svg" alt="icon-pinterest"></span>
-            <span class="shareBtnActive"><img src="./images/icon-share.svg" alt="share button"></span>
-        `;
-
-        shareComp.innerHTML = shareContent;
+        const mainElem = document.querySelector("main");
         mainElem.appendChild(shareComp);
-        
         const slideUp = setInterval(() => {
             topPosition++;
             shareComp.style.bottom = topPosition + "px";
-            shareComp.style.display = "flex"
-
-            if (topPosition == 0) {
+            shareComp.style.display = "flex";
+            isLoaded = true;
+            if (topPosition >= 0) {
                 clearInterval(slideUp);
             }
         }, 5);
     } else {
-        isLoaded = false;
-        const shareComp = document.querySelector("#shareComp");
-        if (shareComp) {
-            mainElem.removeChild(shareComp);
-        }
+        return;
     }
 }
 
+function unloadShare() {
+        unloadTimeout = setTimeout(() => {
+            const slideDown = setInterval(() => {
+                topPosition--;
+                shareComp.style.bottom = topPosition + "px";
+                isLoaded = false;
+                if (topPosition <= -120) {
+                    clearInterval(slideDown);
+                }
+            }, 5);
+        }, 300);
+}
 
+function cancelUnloadShare() {
+    clearTimeout(unloadTimeout);
+}
 
 shareBtn.addEventListener("mouseover", loadShare);
-shareBtn.addEventListener("mouseout", loadShare);
+shareBtn.addEventListener("mouseout", unloadShare);
+shareComp.addEventListener("mouseenter", cancelUnloadShare);
