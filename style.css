@@ -10,6 +10,7 @@ body {
 }
 
 main {
+    position: relative;
     margin: 10vh 5vw;
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@ main {
     align-items: center;
     background-color: #fff;
     border-radius: 2vh;
+    overflow: hidden;
 }
 
 .leftSide {
@@ -109,11 +111,9 @@ main {
 
 
 /* JS */
-#shareMobile {
-    display: none;
-}
-
-#shareMobileActive {
+.shareMobileActive {
+    position: absolute;
+    bottom: -50px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
