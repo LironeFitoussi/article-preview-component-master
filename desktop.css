@@ -8,6 +8,19 @@ main {
     flex-direction: row;
     width: 60vw;
     height: 40vh;
+    overflow: visible;
+}
+
+a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a > img {
+    width: 1vw;
+    height: 1.7vh;
 }
 
 .leftSide {
@@ -58,3 +71,18 @@ main {
     width: 70%;
 }
 
+.shareMobileActive {
+    width: 14vw;
+    border-radius: 1vh;
+    height: 5vh;
+    justify-content: center;
+    gap: 1vw;
+    bottom: 14vh;
+    align-items: center;
+    right: -21px;
+}
+
+.shareMobileActive > span {
+    font-size: 1.2vh;
+    letter-spacing: 5px;
+}
