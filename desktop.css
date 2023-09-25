@@ -19,17 +19,17 @@ main {
 }
 
 .rightSide {
-    position: absolute;
-    margin: 0 3.5vw;
+    padding: 3.5vw;
     gap: 2.5vh;
+    width: 68vw;
 }
 
 .rightSide > h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .rightSide > p {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .commentUser {
@@ -44,14 +44,14 @@ main {
     width: 4vw;
 } 
 
-.shareBtn {
-    padding: 1.7vw;
+#shareBtn {
+    padding: 1.4vw;
     height: 0;
     width: 0;
 }
 
-.shareBtn > img {
-    width: 1.7vw;
+#shareBtn > img {
+    width: 1.4vw;
 }
 
 .nameAndDate {
