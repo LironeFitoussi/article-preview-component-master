@@ -3,7 +3,7 @@ const shareBtn = document.querySelector("#shareBtn")
 shareBtn.addEventListener("mouseover", loadShare)
 
 const shareCome = `
-    <div id="shareMobile">
+    <div id="shareMobileActive">
         <span>SHARE</span>
         <span><img src="./images/icon-facebook.svg" alt="icon-facebook"></span>
         <span><img src="./images/icon-twitter.svg" alt="icon-twitter"></span>
@@ -12,8 +12,14 @@ const shareCome = `
     </div>
 `;
 
+let isLoaded = false
 function loadShare() {
     const mainElem = document.querySelector("main");
-    mainElem.innerHTML += shareCome
-
+    if (!isLoaded) {
+        isLoaded = true
+        mainElem.innerHTML += shareCome
+    } else {
+        isLoaded = false
+        shareMobileActive.remove()
+    }
 }
